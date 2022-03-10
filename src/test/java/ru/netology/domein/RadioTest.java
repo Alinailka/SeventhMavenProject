@@ -7,22 +7,46 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class RadioTest {
-//    @Test
-//  void checkNewChanel() {
-//
-//        Radio radio = new Radio();
-//        int newCurrentChanel = -1;
-//        int expected = 6;
-//        int actual = radio.newChanel(newCurrentChanel);
-//        assertEquals(expected, actual);
-//    }
+
+    @Test
+    void newChanel(){
+        Radio radio = new Radio();
+
+        radio.setNewChanel(8);
+        int expected = radio.currentChanel;
+        int actual = radio.getNewChanel();
+        assertEquals(expected, actual);
+    }
+
+
+
+
+
     @Test
     void nextChanel(){
         Radio radio = new Radio();
         int expected = 1;
-        int actual = radio.nextChanel();
+        int actual = radio.getNextChanel();
         assertEquals(expected, actual);
     }
+    @Test
+    void nextChanelLessMin(){
+        Radio radio = new Radio();
+        int expected = 1;
+        int actual = radio.getNextChanel();
+        assertEquals(expected, actual);
+    }
+
+
+
+//    @Test
+//    void nextChanel(){
+//        Radio radio = new Radio();
+//        int expected = 1;
+//        int actual = radio.nextChanel();
+//        assertEquals(expected, actual);
+//    }
+
     @Test
     void prevChanel() {
         Radio radio = new Radio();
