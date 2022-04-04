@@ -30,8 +30,12 @@ public class Radio {
         }
         return 0;
     }
+    private int currentVolume = 0;
 
-    public int prevChanel(int currentChanel) {
+    public void setCurrentVolume(int currentVolume) {
+        this.currentVolume = currentVolume;
+    }
+    public int prevChanel() {
         if (currentChanel > 0) {
             currentChanel = currentChanel - 1;
             return currentChanel;
@@ -41,12 +45,6 @@ public class Radio {
             return currentChanel;
         }
         return 0;
-    }
-
-    private int currentVolume = 0;
-
-    public void setCurrentVolume(int currentVolume) {
-        this.currentVolume = currentVolume;
     }
 
     public int addVolume() {

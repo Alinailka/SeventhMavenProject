@@ -124,63 +124,63 @@ public class RadioTest {
     @Test
     void prevChanelCurrentMin() {
         Radio radio = new Radio();
-        int currentChanel = 0;
+        radio.setCurrentChanel(0);
         int expected = 9;
-        int actual = radio.prevChanel(currentChanel);
+        int actual = radio.prevChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevChanelCurrentBorderMin() {
         Radio radio = new Radio();
-        int currentChanel = 1;
+        radio.setCurrentChanel(1);
         int expected = 0;
-        int actual = radio.prevChanel(currentChanel);
+        int actual = radio.prevChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevChanelCurrentLessMin() {
         Radio radio = new Radio();
-        int currentChanel = -1;
+        radio.setCurrentChanel(-1);
         int expected = 0;
-        int actual = radio.prevChanel(currentChanel);
+        int actual = radio.prevChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevChanelCurrentMax() {
         Radio radio = new Radio();
-        int currentChanel = 9;
+        radio.setCurrentChanel(9);
         int expected = 8;
-        int actual = radio.prevChanel(currentChanel);
+        int actual = radio.prevChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevChanelCurrentMoreMax() {
         Radio radio = new Radio();
-        int currentChanel = 10;
+        radio.setCurrentChanel(10);
         int expected = 9;
-        int actual = radio.prevChanel(currentChanel);
+        int actual = radio.prevChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevChanelCurrentBorderMax() {
         Radio radio = new Radio();
-        int currentChanel = 8;
+        radio.setCurrentChanel(8);
         int expected = 7;
-        int actual = radio.prevChanel(currentChanel);
+        int actual = radio.prevChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevChanelCurrentOnRange() {
         Radio radio = new Radio();
-        int currentChanel = 5;
+        radio.setCurrentChanel(5);
         int expected = 4;
-        int actual = radio.prevChanel(currentChanel);
+        int actual = radio.prevChanel();
         assertEquals(expected, actual);
     }
 
