@@ -1,8 +1,5 @@
 package ru.netology.domein;
-
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -64,63 +61,63 @@ public class RadioTest {
     @Test
     void nextChanelCurrentMin() {
         Radio radio = new Radio();
-        int currentChanel = 0;
+        radio.setCurrentChanel(0);
         int expected = 1;
-        int actual = radio.nextChanel(currentChanel);
+        int actual = radio.nextChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextChanelCurrentBorderMin() {
         Radio radio = new Radio();
-        int currentChanel = 1;
+        radio.setCurrentChanel(1);
         int expected = 2;
-        int actual = radio.nextChanel(currentChanel);
+        int actual = radio.nextChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextChanelCurrentLessMin() {
         Radio radio = new Radio();
-        int currentChanel = -1;
+        radio.setCurrentChanel(-1);
         int expected = 0;
-        int actual = radio.nextChanel(currentChanel);
+        int actual = radio.nextChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextChanelCurrentMax() {
         Radio radio = new Radio();
-        int currentChanel = 9;
+        radio.setCurrentChanel(9);
         int expected = 0;
-        int actual = radio.nextChanel(currentChanel);
+        int actual = radio.nextChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextChanelCurrentMoreMax() {
         Radio radio = new Radio();
-        int currentChanel = 10;
+        radio.setCurrentChanel(10);
         int expected = 0;
-        int actual = radio.nextChanel(currentChanel);
+        int actual = radio.nextChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextChanelCurrentBorderMax() {
         Radio radio = new Radio();
-        int currentChanel = 8;
+        radio.setCurrentChanel(8);
         int expected = 9;
-        int actual = radio.nextChanel(currentChanel);
+        int actual = radio.nextChanel();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextChanelCurrentOnRange() {
         Radio radio = new Radio();
-        int currentChanel = 5;
+        radio.setCurrentChanel(5);
         int expected = 6;
-        int actual = radio.nextChanel(currentChanel);
+        int actual = radio.nextChanel();
         assertEquals(expected, actual);
     }
 
@@ -190,126 +187,126 @@ public class RadioTest {
     @Test
     void addVolumeCurrentMin() {
         Radio radio = new Radio();
-        int currentVolume = 0;
+        radio.setCurrentVolume(0);
         int expected = 1;
-        int actual = radio.addVolume(currentVolume);
+        int actual = radio.addVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void addVolumeCurrentBorderMin() {
         Radio radio = new Radio();
-        int currentVolume = 1;
+        radio.setCurrentVolume(1);
         int expected = 2;
-        int actual = radio.addVolume(currentVolume);
+        int actual = radio.addVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void addVolumeCurrentLessMin() {
         Radio radio = new Radio();
-        int currentVolume = -1;
+        radio.setCurrentVolume(-1);
         int expected = 0;
-        int actual = radio.addVolume(currentVolume);
+        int actual = radio.addVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void addVolumeCurrentMax() {
         Radio radio = new Radio();
-        int currentVolume = 10;
+        radio.setCurrentVolume(10);
         int expected = 10;
-        int actual = radio.addVolume(currentVolume);
+        int actual = radio.addVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void addVolumeCurrentMoreMax() {
         Radio radio = new Radio();
-        int currentVolume = 11;
+        radio.setCurrentVolume(11);
         int expected = 0;
-        int actual = radio.addVolume(currentVolume);
+        int actual = radio.addVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void addVolumeCurrentBorderMax() {
         Radio radio = new Radio();
-        int currentVolume = 9;
+        radio.setCurrentVolume(9);
         int expected = 10;
-        int actual = radio.addVolume(currentVolume);
+        int actual = radio.addVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void addVolumeCurrentOnRange() {
         Radio radio = new Radio();
-        int currentVolume = 5;
+        radio.setCurrentVolume(5);
         int expected = 6;
-        int actual = radio.addVolume(currentVolume);
+        int actual = radio.addVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void downVolumeCurrentMin() {
         Radio radio = new Radio();
-        int currentVolume = 0;
+        radio.setCurrentVolume(0);
         int expected = 0;
-        int actual = radio.downVolume(currentVolume);
+        int actual = radio.downVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void downVolumeCurrentBorderMin() {
         Radio radio = new Radio();
-        int currentVolume = 1;
+        radio.setCurrentVolume(1);
         int expected = 0;
-        int actual = radio.downVolume(currentVolume);
+        int actual = radio.downVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void downVolumeCurrentLessMin() {
         Radio radio = new Radio();
-        int currentVolume = -1;
+        radio.setCurrentVolume(-1);
         int expected = 0;
-        int actual = radio.downVolume(currentVolume);
+        int actual = radio.downVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void downVolumeCurrentMax() {
         Radio radio = new Radio();
-        int currentVolume = 10;
+        radio.setCurrentVolume(10);
         int expected = 9;
-        int actual = radio.downVolume(currentVolume);
+        int actual = radio.downVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void downVolumeCurrentMoreMax() {
         Radio radio = new Radio();
-        int currentVolume = 11;
+        radio.setCurrentVolume(11);
         int expected = 0;
-        int actual = radio.downVolume(currentVolume);
+        int actual = radio.downVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void downVolumeCurrentBorderMax() {
         Radio radio = new Radio();
-        int currentVolume = 9;
+        radio.setCurrentVolume(9);
         int expected = 8;
-        int actual = radio.downVolume(currentVolume);
+        int actual = radio.downVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void downVolumeCurrentOnRange() {
         Radio radio = new Radio();
-        int currentVolume = 5;
+        radio.setCurrentVolume(5);
         int expected = 4;
-        int actual = radio.downVolume(currentVolume);
+        int actual = radio.downVolume();
         assertEquals(expected, actual);
     }
 }
